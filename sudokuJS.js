@@ -1748,6 +1748,7 @@
 		var solveAll = function(){
 			solveMode = SOLVE_MODE_ALL;
 			var canContinue = true;
+            alert("The board has been sucessfully solved");
 			while(canContinue) {
 				var startStrat = onlyUpdatedCandidates ? 2 : 0;
 				canContinue = solveFn(startStrat);
