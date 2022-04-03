@@ -240,3 +240,16 @@ header.website-header {
 .form-switch{
 	margin-bottom: 10px;
 }
+
+.scanner {
+	margin-right: 180px;
+	margin-top: 15px;
+	font-size: 17px;
+}
+a {
+	text-decoration: none !important;
+	color: rgb(20, 20, 20);
+  }
+a:hover {
+	color: rgb(20, 20, 20);
+}
