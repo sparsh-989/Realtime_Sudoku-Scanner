@@ -1666,6 +1666,7 @@
 
 			}
 		};
+        
 
     // generates board puzzle, i.e. the answers for this round
     // requires that a board for boardSize has already been initiated
@@ -1698,6 +1699,7 @@
 					boardTooEasy = false;
 				else
 					board = boardAnswer;
+                
 			}
 			solveMode = SOLVE_MODE_STEP;
 			if($boardInputs)
@@ -1785,6 +1787,32 @@
 		var setEditingCandidates = function(newVal){
 			editingCandidates = newVal;
 		};
+        
+        var submitBoard= function()
+        {
+            $board.addClass("submitBoard");
+            if(isBoardFinished(board))
+                {
+                    var flag=0
+                    
+                    
+                    for (var i=0; i < boardSize*boardSize; i++){
+				if(board[i].val === board[i].val)
+                    flag=1
+                        else
+                            {
+                            alert("wrong");
+                        break;
+                            }
+                    }
+                        if(flag==1)
+                        alert("done");
+			
+                    
+			
+                }
+                
+        }
 
 		return {
 			solveAll : solveAll,
@@ -1796,7 +1824,8 @@
 			hideCandidates : hideCandidates,
 			showCandidates : showCandidates,
 			setEditingCandidates: setEditingCandidates,
-			generateBoard : generateBoard
+			generateBoard : generateBoard,
+            submitBoard :submitBoard
 		};
 	};
 
