@@ -87,7 +87,7 @@
 				
 				Solve All
 			</button>
-			<button class="action submit" onclick="UI.open_prompt()">
+			<button class="action solve js-submit-btn" onclick="UI.open_prompt()">
 				
 				Submit
 			</button>
@@ -104,6 +104,7 @@
 			$generateBoardBtnVeryHard = $(".js-generate-board-btn--very-hard"),
 
 			$solveStepBtn = $(".js-solve-step-btn"),
+            $submitBoardBtn = $(".js-submit-btn"),
 			$solveAllBtn = $(".js-solve-all-btn"),
 			$clearBoardBtn = $(".js-clear-board-btn"),
 
@@ -118,6 +119,7 @@
 		$solveStepBtn.on("click", mySudokuJS.solveStep);
 		$solveAllBtn.on("click", mySudokuJS.solveAll);
 		$clearBoardBtn.on("click", mySudokuJS.clearBoard);
+        $submitBoardBtn.on("click", mySudokuJS.submitBoard);
 
 		$generateBoardBtnEasy.on("click", function(){
 			mySudokuJS.generateBoard("easy");
